@@ -2,6 +2,24 @@
 
 This is a basic web application built using Node.js and the Express framework. It provides a server that listens on a specified port and implements three different routes: a root URL route, a POST route to save user information, and a GET route to retrieve user information.
 
+### Documenting Steps, Challenges, and Lessons Learned
+
+#### Steps Followed:
+1. Set up a new Node.js project using npm and initialized the project.
+2. Installed Express framework and other dependencies like morgan fs and dotenv.
+3. Created a server file (server.js) and imported the necessary modules.
+4. Set up a basic Express server that listens on a specific port.
+5. Implemented three routes: a root URL route, a POST route for saving user information, and a GET route for retrieving user information.
+6. Used middleware for logging and error handling.
+
+#### Challenges Faced:
+1. File handling: One challenge I faced was reading and writing user information to a JSON file. I had to ensure proper error handling and data parsing to handle scenarios like file not found or invalid JSON data.
+2. Middleware implementation: Implementing morgan middleware for logging  required careful understanding of the Express middleware concept and ensuring it was placed in the correct order in the application flow.
+
+#### Lessons Learned:
+1. Express routing: I gained a better understanding of how to define routes in Express, handle different HTTP methods, and send appropriate responses based on the requested route.
+2. Middleware usage: I learned how to utilize middleware in Express to handle common tasks like logging and error handling. This helped keep the code modular and improved code reusability.
+3. Asynchronous file operations: Working with file operations asynchronously in Node.js helped me grasp concepts related to handling asynchronous operations, including proper error handling and callback functions.
 
 ## Features
 
@@ -64,11 +82,11 @@ Displays a welcome message.
   password: String
 }`
 
-Saves user information to a users.json file.
+Saves user information to a users.json file.  
 `body{
   "name": "John Doe",
   "email": "john.doe@example.com"
-}`
+}`  
 `Response - { message: "User created successfully" } `
 
 #### Get all Users
@@ -77,7 +95,7 @@ Saves user information to a users.json file.
   GET /api/users
 ```
 
-Retrieves user information from the users.json file.
+Retrieves user information from the users.json file.  
 `Response - { message: "ALL Users ", users } `
 
 
@@ -86,7 +104,7 @@ Retrieves user information from the users.json file.
 ```http
   GET /Invalid Endpoints
 ```
-Gives Invalid Endpoint error
+Gives Invalid Endpoint error  
 `Response - { error: "Invalid route" } `
 
 
@@ -98,22 +116,3 @@ Gives Invalid Endpoint error
 
 - [@sarveshgupta1997](https://github.com/sarveshgupta1997)
 
-
-### Documenting Steps, Challenges, and Lessons Learned
-
-#### Steps Followed:
-1. Set up a new Node.js project using npm and initialized the project.
-2. Installed Express framework and other dependencies like morgan fs and dotenv.
-3. Created a server file (server.js) and imported the necessary modules.
-4. Set up a basic Express server that listens on a specific port.
-5. Implemented three routes: a root URL route, a POST route for saving user information, and a GET route for retrieving user information.
-6. Used middleware for logging and error handling.
-
-#### Challenges Faced:
-1. File handling: One challenge I faced was reading and writing user information to a JSON file. I had to ensure proper error handling and data parsing to handle scenarios like file not found or invalid JSON data.
-2. Middleware implementation: Implementing morgan middleware for logging  required careful understanding of the Express middleware concept and ensuring it was placed in the correct order in the application flow.
-
-#### Lessons Learned:
-1. Express routing: I gained a better understanding of how to define routes in Express, handle different HTTP methods, and send appropriate responses based on the requested route.
-2. Middleware usage: I learned how to utilize middleware in Express to handle common tasks like logging and error handling. This helped keep the code modular and improved code reusability.
-3. Asynchronous file operations: Working with file operations asynchronously in Node.js helped me grasp concepts related to handling asynchronous operations, including proper error handling and callback functions.
