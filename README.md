@@ -21,8 +21,6 @@ Clone the project
   git clone https://github.com/sarveshgupta1997/Wellnesys_Coding_Assignment.git
 ```
 
-Go to the project directory
-
 Install dependencies
 
 ```bash
@@ -51,7 +49,7 @@ To run this project, you will need to add the following environment variables to
   GET /
 ```
 
-Displays a welcome message.
+Displays a welcome message.  
 `Response - {msg:"Welcome to the web application!"} `
 
 #### User Save
